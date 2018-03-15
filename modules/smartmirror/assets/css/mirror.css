@@ -1,0 +1,40 @@
+body{background-color: black;}
+
+#weather{
+    font-size: 150px;
+}
+
+.time{
+    font-size: 200px;
+}
+
+.bg-black{
+    background-color: black !important;
+}
+
+.white-text{
+    color: white;
+}
+
+.left-top{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.right-top{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.left-bottom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.right-bottom{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

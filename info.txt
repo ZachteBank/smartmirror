@@ -1,0 +1,29 @@
+Merken
+	Naam
+	
+	> Series
+		Naam
+		Ondertitel
+		Beschrijving
+		
+		> Producten
+			Beschrijving
+			Naam
+			Heel veel opties
+
+			
+			
+			
+			
+templates
+
+Er zijn veel verschillende templates
+Elke template heeft een naam en een "Afbeelding" / preview icoon
+
+Een template kan meerdere dingen bevatten, bijv 3 teksten en 1 afbeelding of 6 buttons etc
+
+
+Referenties
+Onder (bijna?) elke pagina komt een footer met referenties/projecten. Willekeurig een gelade
+Elk project/referentie heeft een of meerdere foto's en elke foto heeft een stuk tekst en een beschrijving op een specifieke plek
+

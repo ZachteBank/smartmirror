@@ -1,0 +1,399 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Smartmirror\n"
+"POT-Creation-Date: 2018-03-01 16:19+0100\n"
+"PO-Revision-Date: 2018-03-01 16:19+0100\n"
+"Last-Translator: \n"
+"Language-Team: CRE8Media\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: ../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: sofco\n"
+
+#: framework/modules/gentelella/views/basic.blade.php:90
+#: masterlight/tmp/views/0d158238a354241d4259874029570f53df33ab49.php:88
+msgid "Deselecteer alles"
+msgstr "Deselect all"
+
+#: framework/modules/gentelella/views/basic.blade.php:91
+#: masterlight/tmp/views/0d158238a354241d4259874029570f53df33ab49.php:88
+msgid "Geen items gevonden"
+msgstr "No items found"
+
+#: masterlight/modules/mailing/Mailing.php:28
+msgid "Mailing beheer"
+msgstr "Mailing management"
+
+#: masterlight/modules/mailing/Mailing.php:30
+msgid "Mailings"
+msgstr "Mailings"
+
+#: masterlight/modules/mailing/Mailing.php:31
+msgid "Mailing toevoegen"
+msgstr "Add mailing"
+
+#: masterlight/modules/masterlight/controllers/LoginController.php:32
+msgid "Het opgegeven e-mailadres of wachtwoord is onjuist."
+msgstr "The email address or password is incorrect."
+
+#: masterlight/modules/masterlight/controllers/LoginController.php:39
+msgid "U bent uitgelogd."
+msgstr "Logged Out Successfully."
+
+#: masterlight/modules/templates/Templates.php:30
+msgid "Website beheer"
+msgstr "Website management"
+
+#: masterlight/modules/templates/Templates.php:32
+msgid "Pagina's"
+msgstr "Pages"
+
+#: masterlight/modules/templates/Templates.php:33
+msgid "Pagina toevoegen"
+msgstr "Add New Page"
+
+#: masterlight/modules/templates/Templates.php:34
+msgid "Overzicht pagina's"
+msgstr "Pages overview"
+
+#: masterlight/modules/templates/Templates.php:37
+msgid "Templates"
+msgstr "Templates"
+
+#: masterlight/modules/templates/Templates.php:38
+msgid "Template toevoegen"
+msgstr "Add template"
+
+#: masterlight/modules/templates/Templates.php:39
+msgid "Overzicht templates"
+msgstr "Templates overview"
+
+#: masterlight/modules/templates/Templates.php:42
+msgid "Formulieren"
+msgstr "Forms"
+
+#: masterlight/modules/templates/Templates.php:43
+msgid "Formulier toevoegen"
+msgstr "Add Form"
+
+#: masterlight/modules/templates/controllers/PageController.php:50
+#: masterlight/modules/templates/controllers/PageController.php:85
+#: masterlight/modules/templates/controllers/PageController.php:134
+#: masterlight/modules/templates/controllers/TemplateController.php:54
+#: masterlight/modules/templates/controllers/TemplateController.php:171
+msgid "Geen pagina gevonden"
+msgstr "No page found"
+
+#: masterlight/modules/templates/controllers/PageController.php:90
+#, php-format
+msgid "Pagina \"%s\" is verwijderd"
+msgstr "Page \"%s\" is deleted"
+
+#: masterlight/modules/templates/controllers/PageController.php:114
+#, php-format
+msgid "Pagina is \"%s\" aangemaakt"
+msgstr "Page is \"%s\" created"
+
+#: masterlight/modules/templates/controllers/PageController.php:141
+#: masterlight/modules/templates/controllers/TemplateController.php:187
+#, php-format
+msgid "Pagina is \"%s\" aangepast"
+msgstr "Page is \"%s\" modified"
+
+#: masterlight/modules/templates/controllers/TemplateController.php:89
+msgid "Geen template gevonden"
+msgstr "No template found"
+
+#: masterlight/modules/templates/controllers/TemplateController.php:94
+#, php-format
+msgid "Template \"%s\" is verwijderd"
+msgstr "Template \"%s\" is deleted"
+
+#: masterlight/modules/templates/controllers/TemplateController.php:126
+msgid "Geen afbeelding gevonden"
+msgstr "No Image found"
+
+#: masterlight/modules/templates/controllers/TemplateController.php:151
+#, php-format
+msgid "Template is \"%s\" aangemaakt"
+msgstr "Template is \"%s\" created"
+
+#: masterlight/tmp/views/802390fb233f91a67a80f1884da9482eeda86a7a.php:6
+msgid "Pagina bewerken"
+msgstr "Edit page"
+
+#: masterlight/tmp/views/802390fb233f91a67a80f1884da9482eeda86a7a.php:6
+msgid "Pagina naam"
+msgstr "Page name"
+
+#: masterlight/tmp/views/802390fb233f91a67a80f1884da9482eeda86a7a.php:6
+msgid "Nederlandse url"
+msgstr "Dutch url"
+
+#: masterlight/tmp/views/802390fb233f91a67a80f1884da9482eeda86a7a.php:6
+msgid "Duitse url"
+msgstr "German url"
+
+#: masterlight/tmp/views/802390fb233f91a67a80f1884da9482eeda86a7a.php:6
+msgid "Engelse url"
+msgstr "English url"
+
+#: masterlight/tmp/views/802390fb233f91a67a80f1884da9482eeda86a7a.php:6
+msgid "Franse url"
+msgstr "French url"
+
+#: masterlight/tmp/views/802390fb233f91a67a80f1884da9482eeda86a7a.php:6
+msgid "Wijzigen"
+msgstr "Modify"
+
+#: masterlight/tmp/views/b33f72ca323f25df69b28af1a984875773fe2d19.php:1
+msgid "Welkom"
+msgstr "Welcome"
+
+#, fuzzy
+#~| msgid "Extra gegevens"
+#~ msgid "Contact opnemen"
+#~ msgstr "Extra information"
+
+#, fuzzy
+#~| msgid "Overzicht pagina's"
+#~ msgid "Overzicht op uw financiën"
+#~ msgstr "Pages overview"
+
+#, fuzzy
+#~| msgid "Voorbeeldtekst"
+#~ msgid "Voordelen"
+#~ msgstr "Example text"
+
+#, fuzzy
+#~| msgid "Extra gegevens"
+#~ msgid "Contact Opnemen"
+#~ msgstr "Extra information"
+
+#, fuzzy
+#~| msgid "Mailing beheer"
+#~ msgid "Mailing berichten instellen"
+#~ msgstr "Mailing management"
+
+#, fuzzy
+#~| msgid "Overzicht pagina's"
+#~ msgid "Overzicht van uw mailings"
+#~ msgstr "Pages overview"
+
+#, fuzzy
+#~| msgid "Formulier genereren"
+#~ msgid "Facturen genereren (PDF)"
+#~ msgstr "Generate formulier"
+
+#, fuzzy
+#~| msgid "Formulier genereren"
+#~ msgid "Offertes genereren (PDF)"
+#~ msgstr "Generate formulier"
+
+#, fuzzy
+#~| msgid "Formulier genereren"
+#~ msgid "Facturen genereren vanuit offertes"
+#~ msgstr "Generate formulier"
+
+#, fuzzy
+#~| msgid "Formulier genereren"
+#~ msgid "Automatisch genereren PDF"
+#~ msgstr "Generate formulier"
+
+#, fuzzy
+#~| msgid "Website beheer"
+#~ msgid "Relatiebeheer"
+#~ msgstr "Website management"
+
+#, fuzzy
+#~| msgid "Mailings"
+#~ msgid "mailingsysteem"
+#~ msgstr "Mailings"
+
+#, fuzzy
+#~| msgid "Nederlandse url"
+#~ msgid "Nederland"
+#~ msgstr "Dutch url"
+
+#, fuzzy
+#~| msgid "Extra gegevens"
+#~ msgid "Contact"
+#~ msgstr "Extra information"
+
+#, fuzzy
+#~| msgid "Pagina naam"
+#~ msgid "ga naar"
+#~ msgstr "Page name"
+
+#, fuzzy
+#~| msgid "Extra gegevens"
+#~ msgid "Contactgegevens"
+#~ msgstr "Extra information"
+
+#, fuzzy
+#~| msgid "Mailings"
+#~ msgid "Mailingsplanner"
+#~ msgstr "Mailings"
+
+#, fuzzy
+#~| msgid "Formulier genereren"
+#~ msgid "Periodieke facturen genereren"
+#~ msgstr "Generate formulier"
+
+#~ msgid "Alle pagina's"
+#~ msgstr "All pages"
+
+#~ msgid "Alle pagina's bekijken"
+#~ msgstr "View all pages"
+
+#~ msgid "Naam"
+#~ msgstr "Name"
+
+#~ msgid "Url"
+#~ msgstr "URL"
+
+#~ msgid "Datum"
+#~ msgstr "Date"
+
+#~ msgid "Actie(s)"
+#~ msgstr "Action(s)"
+
+#~ msgid "Aanpassen"
+#~ msgstr "Edit"
+
+#~ msgid "Verwijderen"
+#~ msgstr "Delete"
+
+#~ msgid "Alle formulieren"
+#~ msgstr "All Forms"
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Kolommen"
+#~ msgstr "Columns"
+
+#~ msgid "Datum aangemaakt"
+#~ msgstr "Date created"
+
+#~ msgid "Datum aangepast"
+#~ msgstr "Date modified"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid "Alle mails"
+#~ msgstr "All Emails"
+
+#~ msgid "Onderwerp"
+#~ msgstr "Subject"
+
+#~ msgid "Pagina aanmaken"
+#~ msgstr "Create page"
+
+#~ msgid "Nieuwe pagina aanmaken"
+#~ msgstr "Create new page:"
+
+#~ msgid "Pagina url"
+#~ msgstr "Page url"
+
+#~ msgid "Aanmaken"
+#~ msgstr "Create"
+
+#~ msgid "Actief"
+#~ msgstr "Active"
+
+#~ msgid "Type"
+#~ msgstr "Type"
+
+#~ msgid "Voorbeeldtekst"
+#~ msgstr "Example text"
+
+#~ msgid "Acties"
+#~ msgstr "Actions"
+
+#~ msgid "Verplaatsen"
+#~ msgstr "Relocation"
+
+#~ msgid "Items"
+#~ msgstr "Items"
+
+#~ msgid "Toevoegen"
+#~ msgstr "Add"
+
+#~ msgid "Extra gegevens"
+#~ msgstr "Extra information"
+
+#~ msgid "data"
+#~ msgstr "data"
+
+#~ msgid "Opslaan"
+#~ msgstr "Save"
+
+#~ msgid "Preview"
+#~ msgstr "Preview"
+
+#~ msgid "Mail versturen"
+#~ msgstr "Send Mail"
+
+#~ msgid "Verzenddatum"
+#~ msgstr "Sending date:"
+
+#~ msgid "Ontvanger(s)"
+#~ msgstr "Recipient(s)"
+
+#~ msgid "Selecteer een of meerdere ontvangers"
+#~ msgstr "Select one or more recipients"
+
+#~ msgid "Titel"
+#~ msgstr "Title"
+
+#~ msgid "Bericht"
+#~ msgstr "Message"
+
+#~ msgid "Knop"
+#~ msgstr "Button"
+
+#~ msgid "Knop tekst"
+#~ msgstr "Button Text"
+
+#~ msgid "Knop url"
+#~ msgstr "Button url"
+
+#~ msgid "Afbeelding"
+#~ msgstr "Image"
+
+#~ msgid "Verzenden"
+#~ msgstr "Send"
+
+#~ msgid "Template aanmaken"
+#~ msgstr "Create template"
+
+#~ msgid "Nieuwe template aanmaken"
+#~ msgstr "Create new template"
+
+#~ msgid "Code"
+#~ msgstr "Code"
+
+#~ msgid "Afbeelding preview"
+#~ msgstr "Preview image"
+
+#~ msgid "Tags"
+#~ msgstr "Tags"
+
+#~ msgid "Genereren"
+#~ msgstr "Generate"
+
+#~ msgid "Haha"
+#~ msgstr "Hihi"
+
+#~ msgid "Hallo %s,"
+#~ msgstr "Welcome %s,"
