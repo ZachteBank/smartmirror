@@ -7,14 +7,20 @@
  */
 
 
-use Framework\Modules\Mailing\Controllers\HomeController;
+use Framework\Modules\Users\Controllers\GroupController;
+use Framework\Modules\Users\Controllers\UserController;
 
 
-router()->group('/pages', function () {
+router()->group('/cms', function () {
     router()->group('/users', function () {
-        router()->get('/generate', [HomeController::class, 'generate'])->setName('users.generate');
-        router()->post('/send', [HomeController::class, 'send'])->setName('users.sendMail')->add(csrf());
-        router()->get('/all-mails', [HomeController::class, 'all'])->setName('users.allMails');
+        router()->get('/add', [UserController::class, 'add'])->setName('users.user.add');
+        router()->post('/store', [UserController::class, 'store'])->setName('users.user.store')->add(csrf());
+        router()->get('/all', [UserController::class, 'all'])->setName('users.user.all');
+    });
+    router()->group('/groups', function () {
+        router()->get('/add', [GroupController::class, 'add'])->setName('users.group.add');
+        router()->post('/store', [GroupController::class, 'store'])->setName('users.group.store')->add(csrf());
+        router()->get('/all', [GroupController::class, 'all'])->setName('users.group.all');
     });
 });
 

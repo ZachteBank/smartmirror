@@ -7,23 +7,23 @@
  */
 
 ?>
-@extends('%masterlight.layouts.default')
+@extends('%smartmirror.layouts.default')
 
-@section('title', _("Overzicht mailings"))
+@section('title', _("Overzicht groepen"))
 
 @section('content')
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
             <div class="x_title">
-                <h4>{{__("Overzicht mailings")}}</h4>
+                <h4>{{__("Overzicht groepen")}}</h4>
                 <div class="clearfix"></div>
             </div>
 
             <table class="table table-striped table-bordered datatable">
                 <thead>
                     <tr>
-                        <th>{{__("Onderwerp")}}</th>
-                        <th>{{__("Datum")}}</th>
+                        <th>{{__("Groep")}}</th>
+                        <th>{{__("Onderdeel van")}}</th>
                         <th>{{__("Actie(s)")}}</th>
                     </tr>
                 </thead>
@@ -34,9 +34,5 @@
         </div>
     </div>
 
-
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
-    <script defer type="text/javascript" src="{{asset("formGeneratorBasic", "js/global.js")}}"></script>
+    
 @endsection

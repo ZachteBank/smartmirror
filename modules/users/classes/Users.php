@@ -28,13 +28,13 @@ class Users extends Module{
         $menu->setName(_("Gebruikers beheer"));
 
         $item = new Item(_("Groepen"), "fa-users");
-        $item->addLink(new Link(_("Groep toevoegen"), route("users.generate")))
-            ->addLink(new Link("Overzicht groepen", route("users.allMails")));
+        $item->addLink(new Link(_("Groep toevoegen"), route("users.group.add")))
+            ->addLink(new Link("Overzicht groepen", route("users.group.all")));
         $menu->addItem($item);
 
         $item = new Item(_("Gebruikers"), "fa-address-book-o");
-        $item->addLink(new Link(_("Gebruiker toevoegen"), route("users.generate")))
-            ->addLink(new Link("Overzicht gebruikers", route("users.allMails")));
+        $item->addLink(new Link(_("Gebruiker toevoegen"), route("users.user.add")))
+            ->addLink(new Link("Overzicht gebruikers", route("users.user.all")));
         $menu->addItem($item);
 
         $gentelella->addMenu($menu);
