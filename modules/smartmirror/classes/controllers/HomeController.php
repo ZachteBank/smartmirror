@@ -17,9 +17,9 @@ class HomeController
     public static function index(Request $request, Response $response, array $args) {
 
         /*
-        $user = new LoginUser();
-        $user->setPassword('hey');
-        debug($user->getPassword());
+        $users = new LoginUser();
+        $users->setPassword('hey');
+        debug($users->getPassword());
         flash()->addMessage('success', 'Heyo~!');
         debug(flash()->getMessage('success'));
         */

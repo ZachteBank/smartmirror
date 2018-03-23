@@ -29,16 +29,16 @@ msgid "Geen items gevonden"
 msgstr "No items found"
 
 #: masterlight/modules/mailing/Mailing.php:28
-msgid "Mailing beheer"
-msgstr "Mailing management"
+msgid "Users beheer"
+msgstr "Users management"
 
 #: masterlight/modules/mailing/Mailing.php:30
 msgid "Mailings"
 msgstr "Mailings"
 
 #: masterlight/modules/mailing/Mailing.php:31
-msgid "Mailing toevoegen"
-msgstr "Add mailing"
+msgid "Users toevoegen"
+msgstr "Add users"
 
 #: masterlight/modules/masterlight/controllers/LoginController.php:32
 msgid "Het opgegeven e-mailadres of wachtwoord is onjuist."
@@ -179,9 +179,9 @@ msgstr "Welcome"
 #~ msgstr "Extra information"
 
 #, fuzzy
-#~| msgid "Mailing beheer"
-#~ msgid "Mailing berichten instellen"
-#~ msgstr "Mailing management"
+#~| msgid "Users beheer"
+#~ msgid "Users berichten instellen"
+#~ msgstr "Users management"
 
 #, fuzzy
 #~| msgid "Overzicht pagina's"

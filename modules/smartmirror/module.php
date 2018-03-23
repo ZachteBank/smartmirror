@@ -21,6 +21,7 @@ return [
         'debugbar',
         'gentelella',
         'login',
+        'users',
         'localization',
         'session','csrf', 'roles', 'viewMinifier'
     ]

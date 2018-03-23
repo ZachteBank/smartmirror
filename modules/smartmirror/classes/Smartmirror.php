@@ -29,7 +29,7 @@ class Smartmirror extends Module
         $menu = new Section();
         $menu->setName(__("Website beheer"));
 
-        $item = new Item(__("Spiegel"), "fa-file-o");
+        $item = new Item(__("Spiegel"), "fa-magic");
         $item->addLink(new Link(__("Spiegel bekijken"), route("mirrorView")));
         $menu->addItem($item);
 

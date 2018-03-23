@@ -8,10 +8,10 @@
 return [
     'database' => [
         'connection' => [
-            'host' => 'mysql2.masterlight.com',
-            'dbname' => 'masterlightcom2',
-            'user' => "masterlightcom2",
-            'password' => "EDjkaYB6P3a4",
+            'host' => '127.0.0.1',
+            'dbname' => 'smartmirror',
+            'users' => "root",
+            'password' => "",
         ],
     ],
 ];
