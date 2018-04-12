@@ -14,6 +14,8 @@ window.onload = function () {
         var ctx = canvas.getContext('2d');
 
         var date = new Date(timestamp*1000);
+
+        date.setHours((today.getUTCHours()) + 2);
         date.setSeconds(date.getSeconds() + i);
         i++;
 

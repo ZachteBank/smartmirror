@@ -9,7 +9,7 @@ function startTime() {
     timeSecond++;
 
     var today = new Date(timestamp*1000);
-    
+
     today.setHours((today.getUTCHours()) + 2);
     console.log(today.getTimezoneOffset());
 
