@@ -43,7 +43,9 @@
         function setWeather(data){
             setTemp(data.main.temp);
             setWeatherIcon(data.weather[0].id);
-            setWeatherWind(data.wind.deg);
+
+
+            //setWeatherWind(data.wind.deg);
 
         }
 

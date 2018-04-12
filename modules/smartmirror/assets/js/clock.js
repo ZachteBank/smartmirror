@@ -1,4 +1,10 @@
+var i = 0;
 window.onload = function () {
+
+    //var this_js_script = $('script[src*="clock.js"]'); // or better regexp to get the file name..
+
+    var timestamp = document.getElementById("analogScript").getAttribute("data-timestamp");
+
     setInterval(showClock, 1000);
 
     function showClock() {
@@ -7,7 +13,10 @@ window.onload = function () {
         var canvas = document.getElementById('canvas');
         var ctx = canvas.getContext('2d');
 
-        var date = new Date;
+        var date = new Date(timestamp*1000);
+        date.setSeconds(date.getSeconds() + i);
+        i++;
+
         var angle;
         var secHandLength = 180;
 

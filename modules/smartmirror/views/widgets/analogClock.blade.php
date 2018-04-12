@@ -14,6 +14,6 @@
 
 
 @push("afterScripts")
-    <script defer src="{{asset('smartmirror','js/clock.js')}}"></script>
+    <script id="analogScript" data-timestamp="{{strtotime("now")}}" defer src="{{asset('smartmirror','js/clock.js')}}"></script>
 
 @endpush

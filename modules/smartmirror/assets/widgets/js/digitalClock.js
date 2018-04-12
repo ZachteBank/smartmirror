@@ -1,9 +1,15 @@
+var timeSecond = 0;
+var timestamp = 0;
 $(document).ready(function(){
+    timestamp = document.getElementById("digitalScript").getAttribute("data-timestamp");
     startTime();
 });
 
 function startTime() {
-    var today = new Date();
+    timeSecond++;
+    var today = new Date(timestamp*1000);
+    today.setSeconds(today.getSeconds()+timeSecond);
+    console.log(today);
     var h = today.getHours();
     var m = today.getMinutes();
     m = checkTime(m);
