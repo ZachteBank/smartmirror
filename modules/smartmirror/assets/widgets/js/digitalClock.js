@@ -7,7 +7,12 @@ $(document).ready(function(){
 
 function startTime() {
     timeSecond++;
+
     var today = new Date(timestamp*1000);
+    
+    today.setHours((today.getUTCHours()) + 2);
+    console.log(today.getTimezoneOffset());
+
     today.setSeconds(today.getSeconds()+timeSecond);
     console.log(today);
     var h = today.getHours();
