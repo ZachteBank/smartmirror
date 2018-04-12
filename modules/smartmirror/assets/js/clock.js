@@ -15,7 +15,7 @@ window.onload = function () {
 
         var date = new Date(timestamp*1000);
 
-        date.setHours((today.getUTCHours()) + 2);
+        date.setHours((date.getUTCHours()) + 2);
         date.setSeconds(date.getSeconds() + i);
         i++;
 

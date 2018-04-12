@@ -6,21 +6,18 @@ $(document).ready(function(){
 });
 
 function startTime() {
-    timeSecond++;
-
     var today = new Date(timestamp*1000);
-
     today.setHours((today.getUTCHours()) + 2);
-    console.log(today.getTimezoneOffset());
-
     today.setSeconds(today.getSeconds()+timeSecond);
+    timeSecond = timeSecond + 10;
+
     console.log(today);
     var h = today.getHours();
     var m = today.getMinutes();
     m = checkTime(m);
     document.getElementById('timeDigital').innerHTML =
         h + ":" + m;
-    var t = setTimeout(startTime, 10000);
+    setTimeout(startTime, 10000);
 }
 function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
