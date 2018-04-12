@@ -27,10 +27,18 @@
 
 
     <script>
-        $.getJSON('http://api.openweathermap.org/data/2.5/weather?q={{$location}}&appid=a08eb18e2263126de2d45502c41e224b&units=metric', function(data) {
-            console.log(data);
-            setWeather(data);
+        $(document).ready(function () {
+           refreshWeather();
         });
+
+        function refreshWeather() {
+            $.getJSON('http://api.openweathermap.org/data/2.5/weather?q={{$location}}&appid=a08eb18e2263126de2d45502c41e224b&units=metric', function(data) {
+                console.log(data);
+                setWeather(data);
+            });
+
+            setInterval(refreshWeather, 60000);
+        }
 
         function setWeather(data){
             setTemp(data.main.temp);
