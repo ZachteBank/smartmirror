@@ -44,7 +44,7 @@ class HomeController
             );
             $results = $service->events->listEvents($calendarId, $optParams);
             foreach ($results->getItems() as $result){
-                echo $result->getStatus() . " - " . $result->getDescription();
+                echo $result->getSummary() . " - " . $result->getHtmlLink();
                 echo "<br>";
             }
             debug($results);
