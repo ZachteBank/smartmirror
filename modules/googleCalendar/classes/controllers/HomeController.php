@@ -39,6 +39,7 @@ class HomeController
                 'timeMin' => date('c'),
             );
             $results = $service->events->listEvents($calendarId, $optParams);
+            var_dump($results);
             return $results;
         } else {
             return $response->withRedirect(route('google.init'));
