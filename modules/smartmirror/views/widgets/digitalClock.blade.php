@@ -8,6 +8,7 @@
 ?>
 <div class="x_panel bg-black white-text">
     <div class="time x_content text-center">
+        <span id="dateDigital"></span>
         <span id="timeDigital"></span>
     </div>
 </div>
