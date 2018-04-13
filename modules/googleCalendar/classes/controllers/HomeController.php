@@ -12,6 +12,7 @@ use Framework\Core\ModuleFinder;
 use Framework\Modules\Router\Response;
 use Google_Client;
 use Google_Service_Calendar;
+use Google_Service_Calendar_Event;
 use Google_Service_Drive;
 use Slim\Http\Request;
 
@@ -19,6 +20,9 @@ class HomeController
 {
     public static function all(Request $request, Response $response, array $args)
     {
+        /**
+         * @var Google_Service_Calendar_Event $result
+         */
         $client = new Google_Client();
         $file = __DIR__ . "\..\..\client_secret.json";
         debug($file);
@@ -39,8 +43,11 @@ class HomeController
                 'timeMin' => date('c'),
             );
             $results = $service->events->listEvents($calendarId, $optParams);
-            var_dump($results);
-            return $results;
+            foreach ($results->getItems() as $result){
+                echo $result->getStatus() . " - " . $result->getDescription();
+                echo "<br>";
+            }
+            debug($results);
         } else {
             return $response->withRedirect(route('google.init'));
         }
