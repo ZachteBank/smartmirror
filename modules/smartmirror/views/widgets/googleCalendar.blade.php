@@ -10,7 +10,7 @@
 <div class="x_panel bg-black white-text">
     <div id="calendar" class="x_content text-center">
         <ul>
-            
+
         </ul>
         <span></span>
     </div>

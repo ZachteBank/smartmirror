@@ -17,6 +17,7 @@
 @endsection
 
 @push("afterScripts")
+    <script defer src="{{asset('smartmirror','widgets/js/dateHelper.js')}}"></script>
     <script defer src="{{asset('smartmirror','js/mirror.js')}}"></script>
 
 @endpush
