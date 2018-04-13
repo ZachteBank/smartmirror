@@ -1,3 +1,10 @@
+function dateToDouble(n) {
+    if(n < 10){
+        n = "0"+n;
+    }
+    return n;
+}
+
 function getDay(number){
     switch (number){
         case 1:
