@@ -5,7 +5,11 @@ body{background-color: black;}
 }
 
 .time{
-    font-size: 200px;
+    font-size: 150px;
+}
+
+#dateDigital {
+    font-size: 80px;
 }
 
 .bg-black{

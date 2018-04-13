@@ -27,7 +27,7 @@
             @component("%smartmirror.widgets.weather", ["location"=>"eindhoven"])@endcomponent
         </div>
 
-        <div class="col-md-4 col-lg-2 col-sm-6 col-xs-6 float-right">
+        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 float-right">
             @component("%smartmirror.widgets.analogClock2")@endcomponent
         </div>
     </div>
