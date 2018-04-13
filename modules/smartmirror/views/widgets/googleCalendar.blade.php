@@ -26,8 +26,20 @@
         function writeCalendar(data) {
             console.log(data);
             for (var obj of data.items) {
-                $("#calendar ul").append("<li>"+obj.summary+"</li>");
+                $("#calendar ul").append("<li>"+obj.summary + " " + convertTime(obj.start.dateTime) + "-" + convertTime(obj.end.dateTime)+"</li>");
             }
+        }
+
+        function convertTime(time) {
+            var date = new Date(time);
+            console.log(date);
+            var hh = date.getHours();
+            var mm = date.getMinutes();
+            if (mm < 10)
+            {
+
+            }
+            return hh + ':' + mm;
         }
     </script>
 
