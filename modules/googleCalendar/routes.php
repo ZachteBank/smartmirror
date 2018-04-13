@@ -14,7 +14,7 @@ use Framework\Modules\Users\Controllers\UserController;
 
 
 router()->group('/google', function () {
-    router()->get('/init', [HomeController::class, 'all'])->setName('google.init');
+    router()->get('/init', [HomeController::class, 'callback'])->setName('google.init');
 
     router()->group('/calendar', function () {
         router()->get('/all', [HomeController::class, 'all'])->setName('google.calendar.all');

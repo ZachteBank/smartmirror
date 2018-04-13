@@ -11,6 +11,7 @@ namespace Framework\Modules\GoogleCalendar\Controllers;
 use Framework\Core\ModuleFinder;
 use Framework\Modules\Router\Response;
 use Google_Client;
+use Google_Service_Calendar;
 use Google_Service_Drive;
 use Slim\Http\Request;
 
@@ -19,26 +20,38 @@ class HomeController
     public static function all(Request $request, Response $response, array $args)
     {
         $client = new Google_Client();
-        $client->setAuthConfig(asset("googleCalendar", "client_secret.json"));
-        $client->addScope(Google_Service_Drive::DRIVE_METADATA_READONLY);
+        $file = __DIR__ . "\..\..\client_secret.json";
+        debug($file);
+        $client->setAuthConfig($file);
+        $client->addScope(Google_Service_Calendar::CALENDAR_READONLY);
 
         if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
             $client->setAccessToken($_SESSION['access_token']);
-            $drive = new Google_Service_Drive($client);
-            $files = $drive->files->listFiles(array())->getItems();
-            echo json_encode($files);
+
+            $service = new Google_Service_Calendar($client);
+
+            // Print the next 10 events on the user's calendar.
+            $calendarId = 'primary';
+            $optParams = array(
+                'maxResults' => 10,
+                'orderBy' => 'startTime',
+                'singleEvents' => TRUE,
+                'timeMin' => date('c'),
+            );
+            $results = $service->events->listEvents($calendarId, $optParams);
+            return $results;
         } else {
             return $response->withRedirect(route('google.init'));
-
         }
     }
 
     public static function callBack(Request $request, Response $response, array $args)
     {
         $client = new Google_Client();
-        $client->setAuthConfigFile(asset("googleCalendar", "client_secret.json"));
+        $file = __DIR__ . "\..\..\client_secret.json";
+        $client->setAuthConfigFile($file);
         $client->setRedirectUri(route("google.init"));
-        $client->addScope(Google_Service_Drive::DRIVE_METADATA_READONLY);
+        $client->addScope(Google_Service_Calendar::CALENDAR_READONLY);
 
         if (! isset($_GET['code'])) {
             $auth_url = $client->createAuthUrl();
