@@ -42,7 +42,7 @@ class HomeController
                 'singleEvents' => TRUE,
                 'timeMin' => date('c'),
             );
-            echo \GuzzleHttp\json_encode($results = $service->events->listEvents($calendarId, $optParams));
+            echo json_encode($results = $service->events->listEvents($calendarId, $optParams)->toSimpleObject());
         } else {
             return $response->withRedirect(route('google.init'));
         }
