@@ -28,7 +28,7 @@
         </div>
 
         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 float-right">
-            @component("%smartmirror.widgets.analogClock2")@endcomponent
+            @component("%smartmirror.widgets.googleCalendar")@endcomponent
         </div>
     </div>
 
@@ -37,6 +37,6 @@
         </div>
 
         <div class="col-md-6 col-lg-4 col-sm-6 col-xs-6 right-bottom">
-            @component("%smartmirror.widgets.analogClock")@endcomponent
+            @component("%smartmirror.widgets.analogClock2")@endcomponent
         </div>
 @endsection

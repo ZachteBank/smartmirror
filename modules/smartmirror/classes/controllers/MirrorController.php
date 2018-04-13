@@ -23,6 +23,18 @@ class MirrorController
         flash()->addMessage('success', 'Heyo~!');
         debug(flash()->getMessage('success'));
         */
+
+
+        /*$opts = array('http' => array('header'=> 'Cookie: ' . $_SERVER['HTTP_COOKIE']."\r\n"));
+        $context = stream_context_create($opts);
+
+        session_write_close(); // unlock the file
+        $googleCalendar = file_get_contents(route("google.calendar.all"), false, $context);
+        session_start(); // Lock the file
+        debug($googleCalendar);
+
+        $googleCalendar = json_decode($googleCalendar);
+        debug($googleCalendar);*/
         return $response->withView('%smartmirror.mirror.mirror', ['hey'=> $args]);
     }
 }

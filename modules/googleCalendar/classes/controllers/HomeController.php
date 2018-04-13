@@ -43,6 +43,7 @@ class HomeController
                 'timeMin' => date('c'),
             );
             echo json_encode($results = $service->events->listEvents($calendarId, $optParams)->toSimpleObject());
+            exit;
         } else {
             return $response->withRedirect(route('google.init'));
         }
