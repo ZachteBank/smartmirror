@@ -23,6 +23,8 @@ return [
         'login',
         'users',
         'localization',
+        "googleCalendar",
+        "weatherIcons",
         'session','csrf', 'roles', 'viewMinifier'
     ]
 ];

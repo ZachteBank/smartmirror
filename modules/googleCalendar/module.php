@@ -8,13 +8,14 @@
 
 
 
-return ["module" => Framework\Modules\WeatherIcons\WeatherIcons::class,
+return ["module" => Framework\Modules\GoogleCalendar\GoogleCalendar::class,
         "dependencies" => [
             "asset",
             "migration",
             "view",
             "router",
             "entityGenerator",
+            "composer",
             "gentelella", 'csrf'
         ]
 
