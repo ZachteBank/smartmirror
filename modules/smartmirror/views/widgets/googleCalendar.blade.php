@@ -18,7 +18,7 @@
     <script>
         $.getJSON('{{route("google.calendar.all")}}', function(data) {
             console.log(data);
-            setWeather(data);
+            writeCalendar(data);
         });
 
         function writeCalendar(data) {
