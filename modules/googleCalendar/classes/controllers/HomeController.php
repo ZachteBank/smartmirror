@@ -15,6 +15,7 @@ use Google_Service_Calendar;
 use Google_Service_Calendar_Event;
 use Google_Service_Drive;
 use Slim\Http\Request;
+use Symfony\Component\Config\Definition\Exception\Exception;
 
 class HomeController
 {
@@ -42,8 +43,13 @@ class HomeController
                 'singleEvents' => TRUE,
                 'timeMin' => date('c'),
             );
-            echo json_encode($results = $service->events->listEvents($calendarId, $optParams)->toSimpleObject());
-            exit;
+            try {
+                header('Content-type: application/json');
+                echo json_encode($results = $service->events->listEvents($calendarId, $optParams)->toSimpleObject());
+            }catch (\Google_Service_Exception $e){
+                return $response->withRedirect(route("google.init"));
+            }
+            //exit;
         } else {
             return $response->withRedirect(route('google.init'));
         }

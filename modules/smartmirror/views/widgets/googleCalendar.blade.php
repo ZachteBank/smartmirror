@@ -9,44 +9,55 @@
 
 <div class="x_panel bg-black white-text">
     <div id="calendar" class="x_content text-center">
-        <ul>
-
-        </ul>
+        <ul></ul>
         <span></span>
     </div>
 </div>
 
 @push("afterScripts")
     <script>
-        $.getJSON('{{route("google.calendar.all")}}', function(data) {
-            console.log(data);
-            writeCalendarToday(data);
-            writeCalendarTomorrow(data);
+        $(document).ready(function () {
+            console.log("Starting with calendar");
+            loadCalendar();
         });
 
-        function writeCalendarToday(data) {
+        function loadCalendar() {
+            $.getJSON('{{route("google.calendar.all")}}', function(data) {
+                console.log(data);
+
+                console.log("Got calendar");
+
+                var $obj = $("#calendar ul");
+
+                CALENDAR_writeCalendarToday($obj, data);
+                CALENDAR_writeCalendarTomorrow($obj, data);
+            });
+        }
+
+        function CALENDAR_writeCalendarToday($obj, data) {
+            console.log("TERING");
             console.log(data);
             var today = new Date();
 
-            $("#calendar ul").append("<li>"+"Vandaag:"+"</li>");
+            $obj.append("<li>"+"Vandaag:"+"</li>");
             for (var obj of data.items) {
                 if(obj.date == today) {
-                    $("#calendar ul").append("<li>" + obj.summary + " " + convertTime(obj.start.dateTime) + "-" + convertTime(obj.end.dateTime) + "</li>");
+                    $obj.append("<li>" + obj.summary + " " + convertTime(obj.start.dateTime) + "-" + convertTime(obj.end.dateTime) + "</li>");
                 }
             }
         }
 
-        function writeCalendarTomorrow(data) {
+        function CALENDAR_writeCalendarTomorrow($obj, data) {
             console.log(data);
             var day = new Date('Apr 30, 2000');
 
             var tomorrow = new Date(day);
             tomorrow.setDate(day.getDate()+1);
 
-            $("#calendar ul").append("<li>"+"Morgen:"+"</li>");
+            $obj.append("<li>"+"Morgen:"+"</li>");
             for (var obj of data.items) {
                 if(obj.date == tomorrow) {
-                    $("#calendar ul").append("<li>" + obj.summary + " " + convertTime(obj.start.dateTime) + "-" + convertTime(obj.end.dateTime) + "</li>");
+                    $obj.append("<li>" + obj.summary + " " + convertTime(obj.start.dateTime) + "-" + convertTime(obj.end.dateTime) + "</li>");
                 }
             }
         }
