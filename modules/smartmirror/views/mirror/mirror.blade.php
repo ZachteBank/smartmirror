@@ -13,6 +13,7 @@
 
 @section('bottomHead')
 
+    <link href="{{asset('smartmirror','css/preloader.css')}}" rel="stylesheet">
     <link href="{{asset('smartmirror','css/mirror.css')}}" rel="stylesheet">
 @endsection
 
