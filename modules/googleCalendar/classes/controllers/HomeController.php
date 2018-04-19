@@ -44,8 +44,9 @@ class HomeController
                 'timeMin' => date('c'),
             );
             try {
-                header('Content-type: application/json');
-                echo json_encode($results = $service->events->listEvents($calendarId, $optParams)->toSimpleObject());
+                $response->withHeader('Content-Type', 'application/json');
+                $response->write(json_encode($results = $service->events->listEvents($calendarId, $optParams)->toSimpleObject()));
+                return $response;
             }catch (\Google_Service_Exception $e){
                 return $response->withRedirect(route("google.init"));
             }
