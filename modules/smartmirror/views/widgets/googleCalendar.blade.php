@@ -22,17 +22,38 @@
         });
 
         function loadCalendar() {
-            $.getJSON('{{route("google.calendar.all")}}', function(data) {
-                console.log(data);
-
-                console.log("Got calendar");
-
-                var $obj = $("#calendar ul");
-
-                CALENDAR_writeCalendarToday($obj, data);
-                CALENDAR_writeCalendarTomorrow($obj, data);
+            var url = '{{route("google.calendar.all")}}';
+            $.ajax({
+                url: url,
+                dataType: 'json',
+                type: 'GET',
+                success: function (data) {
+                    console.log("Ajax done");
+                    callBack(data);
+                },
+                error: function (data) {
+                    alert("Couldn't fetch data");
+                }
             });
+
+
+            /*$.getJSON(url, function(data) {
+                console.log("GetJson done");
+                callBack(data);
+            });*/
         }
+
+        function callBack(data) {
+            console.log("Callback");
+            console.log(data);
+
+            var $obj = $("#calendar ul");
+            $obj.empty();
+
+            CALENDAR_writeCalendarToday($obj, data);
+            CALENDAR_writeCalendarTomorrow($obj, data);
+        }
+
 
         function CALENDAR_writeCalendarToday($obj, data) {
             console.log("TERING");
