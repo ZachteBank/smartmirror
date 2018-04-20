@@ -26,7 +26,7 @@
 @section('body')
     <div id="loader-wrapper">
         <div id="loader"></div>
-    </div>
+    </div>0
     <div class="row">
         <div class="col-md-4 col-lg-2 col-sm-6 col-xs-6">
             @component("%smartmirror.widgets.weather", ["location"=>"eindhoven"])@endcomponent
