@@ -9,10 +9,22 @@
 
 <div class="x_panel bg-black white-text">
     <div id="calendar" class="x_content text-center">
-        <ul></ul>
+        <ul class="today"></ul>
+        <ul class="tomorrow"></ul>
         <span></span>
     </div>
 </div>
+
+<style>
+    #calendar ul{
+        list-style-type: none;
+    }
+
+    #calendar ul:first-child
+    {
+        font-weight: bold;
+    }
+</style>
 
 @push("afterScripts")
     <script>
@@ -47,11 +59,13 @@
             console.log("Callback");
             console.log(data);
 
-            var $obj = $("#calendar ul");
-            $obj.empty();
+            var $today = $("#calendar ul.today");
+            var $tomorrory = $("#calendar ul.tomorrow");
+            $today.empty();
+            $tomorrory.empty();
 
-            CALENDAR_writeCalendarToday($obj, data);
-            CALENDAR_writeCalendarTomorrow($obj, data);
+            CALENDAR_writeCalendarToday($today, data);
+            CALENDAR_writeCalendarTomorrow($tomorrory, data);
         }
 
 
@@ -89,7 +103,7 @@
          * @param {Date} date2 Date2
          */
 function compareDate(date1, date2) {
-    return (date1.getUTCDate() == date2.getUTCDate());
+    return (date1.getUTCDate() === date2.getUTCDate());
 }
 
         function convertTime(time) {
