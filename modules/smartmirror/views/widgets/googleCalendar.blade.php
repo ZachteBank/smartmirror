@@ -18,12 +18,13 @@
 <style>
     #calendar ul{
         list-style-type: none;
+        font-size: 20px;
     }
 
     #calendar ul li:first-child
     {
         font-weight: bold;
-        font-size: 20px;
+        font-size: 30px;
     }
 </style>
 
