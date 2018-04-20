@@ -8,8 +8,8 @@
 ?>
 <div class="x_panel bg-black white-text">
     <div class="time x_content text-center">
-        <span id="dateDigital"></span>
-        <span id="timeDigital"></span>
+        <span id="dateDigital" class="hidden"></span>
+        <span id="timeDigital" class="hidden"></span>
     </div>
 </div>
 
@@ -17,5 +17,16 @@
 
     <script id="digitalScript" data-timestamp="{{strtotime("now")}}" defer src="{{asset('smartmirror','widgets/js/digitalClock.js')}}"></script>
 
+    <script>
+        var $dateDigital = $("#dateDigital");
+        $dateDigital.hide();
+        $dateDigital.removeClass("hidden");
+        $dateDigital.fadeIn(2000);
+
+        var $timeDigital = $("#timeDigital");
+        $timeDigital.hide();
+        $timeDigital.removeClass("hidden");
+        $timeDigital.fadeIn(2000);
+    </script>
 
     @endpush

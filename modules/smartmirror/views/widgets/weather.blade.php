@@ -11,7 +11,7 @@
     <div id="weather" class="x_content text-center">
         <div class="weatherdata hidden">
             <span id="weatherCurrent"><span id="weatherCurrentTemp"></span>&deg;</span>
-            
+
             <span id="weatherIcon"><i class="fa fa-cloud"></i><i class=""></i></span>
         </div>
     </div>
