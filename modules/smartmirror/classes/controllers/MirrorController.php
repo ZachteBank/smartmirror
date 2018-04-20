@@ -35,6 +35,13 @@ class MirrorController
 
         $googleCalendar = json_decode($googleCalendar);
         debug($googleCalendar);*/
+        $_SESSION["google_callback"] = route("mirrorView");
+        if(!isset($_SESSION['access_token']) || !$_SESSION['access_token']){
+            return $response->withRedirect(route("google.init"));
+        }
+        if($_SESSION['access_token']["created"]+$_SESSION['access_token']["expires_in"] < strtotime("now")){
+            return $response->withRedirect(route("google.init"));
+        }
         return $response->withView('%smartmirror.mirror.mirror', ['hey'=> $args]);
     }
 }

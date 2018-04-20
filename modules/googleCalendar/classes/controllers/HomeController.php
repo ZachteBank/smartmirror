@@ -30,6 +30,8 @@ class HomeController
         $client->setAuthConfig($file);
         $client->addScope(Google_Service_Calendar::CALENDAR_READONLY);
 
+        $_SESSION["google_callback"] = route("google.calendar.all");
+
         if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
             $client->setAccessToken($_SESSION['access_token']);
 
@@ -70,7 +72,10 @@ class HomeController
         } else {
             $client->authenticate($_GET['code']);
             $_SESSION['access_token'] = $client->getAccessToken();
-            return $response->withRedirect(route('google.calendar.all'));
+            if(!isset($_SESSION["google_callback"]) || !$_SESSION["google_callback"]){
+                $_SESSION["google_callback"] = route("google.calendar.all");
+            }
+            return $response->withRedirect($_SESSION["google_callback"]);
         }
     }
 }
