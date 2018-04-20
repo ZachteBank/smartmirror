@@ -42,3 +42,7 @@ body{background-color: black;}
     bottom: 0;
     right: 0;
 }
+
+.x_panel{
+    border: 0px;
+}
