@@ -20,9 +20,10 @@
         list-style-type: none;
     }
 
-    #calendar ul:first-child
+    #calendar ul li:first-child
     {
         font-weight: bold;
+        font-size: 20px;
     }
 </style>
 
