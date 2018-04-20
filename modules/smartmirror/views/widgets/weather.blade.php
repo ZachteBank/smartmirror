@@ -30,7 +30,7 @@
 
     <script>
         refreshWeather();
-        setInterval(refreshWeather, 60000);
+        setInterval(refreshWeather, 30*1000);
 
         function refreshWeather() {
             var $weatherdata = $("#weather .weatherdata");
