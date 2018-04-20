@@ -6,4 +6,7 @@ $('.pull-down').each(function() {
 $(window).on('load', function () {
     console.log("Fade out");
     $('#loader-wrapper').fadeOut('slow');
+setTimeout(function(){
+    location.reload(1);
+}, 1*60*60*1000);
 });
