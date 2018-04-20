@@ -8,7 +8,7 @@
 ?>
 
 <div class="x_panel bg-black white-text">
-    <div id="calendar" class="x_content text-center">
+    <div id="calendar" class="x_content text-center hidden">
         <ul class="today"></ul>
         <ul class="tomorrow"></ul>
         <span></span>
@@ -30,7 +30,13 @@
 
 @push("afterScripts")
     <script>
+        var $weatherdata;
         $(document).ready(function () {
+
+            $weatherdata = $("#calendar");
+            $weatherdata.hide();
+            $weatherdata.removeClass("hidden");
+
             console.log("Starting with calendar");
             loadCalendar();
         });
@@ -68,6 +74,7 @@
 
             CALENDAR_writeCalendarToday($today, data);
             CALENDAR_writeCalendarTomorrow($tomorrory, data);
+            $weatherdata.fadeIn("slow");
         }
 
 
