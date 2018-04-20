@@ -9,9 +9,12 @@
 
 <div class="x_panel bg-black white-text">
     <div id="weather" class="x_content text-center">
-        <span id="weatherCurrent"><span id="weatherCurrentTemp">10</span>&deg;</span>
-        <div class="ln_solid"></div>
-        <span id="weatherIcon"><i class="fa fa-cloud"></i><i class=""></i></span>
+        <div class="loading"><i class="fa fa-spinner fa-pulse fa-fw"></i></div>
+        <div class="weatherdata hidden">
+            <span id="weatherCurrent"><span id="weatherCurrentTemp"></span>&deg;</span>
+            <div class="ln_solid"></div>
+            <span id="weatherIcon"><i class="fa fa-cloud"></i><i class=""></i></span>
+        </div>
     </div>
 </div>
 
@@ -31,9 +34,18 @@
         setInterval(refreshWeather, 60000);
 
         function refreshWeather() {
+            var $weatherdata = $("#weather .weatherdata");
+            var $weatherloading = $("#weather .loading");
+            $weatherdata.hide();
+            $weatherdata.removeClass("hidden");
+
+
             $.getJSON('http://api.openweathermap.org/data/2.5/weather?q={{$location}}&appid=a08eb18e2263126de2d45502c41e224b&units=metric', function(data) {
                 console.log(data);
                 setWeather(data);
+                $weatherloading.fadeOut("fast", function () {
+                    $weatherdata.fadeIn("slow");
+                });
             });
 
         }

@@ -56,32 +56,41 @@
 
 
         function CALENDAR_writeCalendarToday($obj, data) {
-            console.log("TERING");
-            console.log(data);
+            console.log("today");
             var today = new Date();
 
             $obj.append("<li>"+"Vandaag:"+"</li>");
-            for (var obj of data.items) {
-                if(obj.date == today) {
-                    $obj.append("<li>" + obj.summary + " " + convertTime(obj.start.dateTime) + "-" + convertTime(obj.end.dateTime) + "</li>");
+            for (var item of data.items) {
+                var date = new Date(item.start.dateTime);
+                if(compareDate(date, today)) {
+                    $obj.append("<li>" + item.summary + " " + convertTime(item.start.dateTime) + "-" + convertTime(item.end.dateTime) + "</li>");
                 }
             }
         }
 
         function CALENDAR_writeCalendarTomorrow($obj, data) {
             console.log(data);
-            var day = new Date('Apr 30, 2000');
 
-            var tomorrow = new Date(day);
-            tomorrow.setDate(day.getDate()+1);
+            var tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate()+1);
 
             $obj.append("<li>"+"Morgen:"+"</li>");
-            for (var obj of data.items) {
-                if(obj.date == tomorrow) {
-                    $obj.append("<li>" + obj.summary + " " + convertTime(obj.start.dateTime) + "-" + convertTime(obj.end.dateTime) + "</li>");
+            for (var item of data.items) {
+                var date = new Date(item.start.dateTime);
+                console.log("Date timestamp:");
+
+                if(compareDate(date, tomorrow)) {
+                    $obj.append("<li>" + item.summary + " " + convertTime(item.start.dateTime) + "-" + convertTime(item.end.dateTime) + "</li>");
                 }
             }
         }
+        /**
+         * @param {Date} date1 Date1
+         * @param {Date} date2 Date2
+         */
+function compareDate(date1, date2) {
+    return (date1.getUTCDate() == date2.getUTCDate());
+}
 
         function convertTime(time) {
             var date = new Date(time);
