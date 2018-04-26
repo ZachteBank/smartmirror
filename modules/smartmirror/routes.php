@@ -9,6 +9,7 @@
 use Framework\Modules\Login\Middleware\LoginMiddleware;
 use Framework\Modules\Smartmirror\Controllers\HomeController;
 use Framework\Modules\Smartmirror\Controllers\MirrorController;
+use Framework\Modules\Smartmirror\Controllers\RssController;
 
 router()->group('/about', function () {
     router()->get('/us', [HomeController::class, 'information'])->setName('info');
@@ -41,3 +42,7 @@ router()->group('/debug', function () {
 router()->get('/home', [HomeController::class, 'index'])->setName('home');
 
 router()->get('/mirror', [MirrorController::class, 'index'])->setName('mirrorView');
+
+router()->group('/rss', function () {
+    router()->get('/nu', [RssController::class, 'NuDotNl'])->setName('rss.NuDotNl');
+});
