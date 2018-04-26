@@ -107,7 +107,7 @@
             for (var item of data.items) {
                 var date = new Date(item.start.dateTime);
                 if(compareDate(date, today)) {
-                    $obj.append("<li class='col-md-8 col-md-offset-2'><div class='summary col-md-5'>" + item.summary + "</div>" +
+                    $obj.append("<li class=''><div class='summary col-md-7'>" + item.summary + "</div>" +
                         "<div class='startDateTime col-md-2'>" + convertTime(item.start.dateTime) + "</div>" +
                         "<div class='stripe col-md-1'>-</div>" +
                         "<div class='endDateTime col-md-2'>" + convertTime(item.end.dateTime) + "</div></li>");
@@ -127,10 +127,10 @@
                 console.log("Date timestamp:");
 
                 if(compareDate(date, tomorrow)) {
-                    $obj.append("<li class='col-md-8 col-md-offset-2'><div class='summary col-md-5'>" + item.summary + "</div>" +
-                        "<div class='startDateTime col-md-1'>" + convertTime(item.start.dateTime) + "</div>" +
+                    $obj.append("<li class=''><div class='summary col-md-7'>" + item.summary + "</div>" +
+                        "<div class='startDateTime col-md-2'>" + convertTime(item.start.dateTime) + "</div>" +
                         "<div class='stripe col-md-1'>-</div>" +
-                        "<div class='endDateTime col-md-1'>" + convertTime(item.end.dateTime) + "</div></li>");
+                        "<div class='endDateTime col-md-2'>" + convertTime(item.end.dateTime) + "</div></li>");
                 }
             }
         }
