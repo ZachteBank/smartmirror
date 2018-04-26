@@ -33,7 +33,7 @@
         </div>
 
         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 float-right">
-            @component("%smartmirror.widgets.googleCalendar")@endcomponent
+            @component("%smartmirror.widgets.nuDotNl")@endcomponent
         </div>
     </div>
 
