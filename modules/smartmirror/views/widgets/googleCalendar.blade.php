@@ -19,12 +19,22 @@
     #calendar ul{
         list-style-type: none;
         font-size: 20px;
+        overflow: hidden;
     }
 
     #calendar ul li:first-child
     {
         font-weight: bold;
         font-size: 30px;
+    }
+
+    #calendar ul li div{
+        display: inline-block;
+        text-align: left;
+    }
+
+    #calendar ul li div.stripe{
+        text-align: center;
     }
 </style>
 
@@ -86,7 +96,10 @@
             for (var item of data.items) {
                 var date = new Date(item.start.dateTime);
                 if(compareDate(date, today)) {
-                    $obj.append("<li>" + item.summary + " " + convertTime(item.start.dateTime) + "-" + convertTime(item.end.dateTime) + "</li>");
+                    $obj.append("<li><div class='summary col-md-5 col-md-offset-2'>" + item.summary + "</div>" +
+                        "<div class='startDateTime col-md-1'>" + convertTime(item.start.dateTime) + "</div>" +
+                        "<div class='stripe col-md-1'>-</div>" +
+                        "<div class='endDateTime col-md-1'>" + convertTime(item.end.dateTime) + "</div></li>");
                 }
             }
         }
@@ -103,7 +116,10 @@
                 console.log("Date timestamp:");
 
                 if(compareDate(date, tomorrow)) {
-                    $obj.append("<li>" + item.summary + " " + convertTime(item.start.dateTime) + "-" + convertTime(item.end.dateTime) + "</li>");
+                    $obj.append("<li><div class='summary col-md-5 col-md-offset-2'>" + item.summary + "</div>" +
+                        "<div class='startDateTime col-md-1'>" + convertTime(item.start.dateTime) + "</div>" +
+                        "<div class='stripe col-md-1'>-</div>" +
+                        "<div class='endDateTime col-md-1'>" + convertTime(item.end.dateTime) + "</div></li>");
                 }
             }
         }
