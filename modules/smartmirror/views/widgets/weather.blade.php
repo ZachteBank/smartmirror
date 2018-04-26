@@ -29,13 +29,17 @@
 
 
     <script>
+        var faded = false;
         refreshWeather();
         setInterval(refreshWeather, 30*1000);
 
         function refreshWeather() {
             var $weatherdata = $("#weather .weatherdata");
-            $weatherdata.hide();
-            $weatherdata.removeClass("hidden");
+            if(!faded) {
+                $weatherdata.hide();
+                $weatherdata.removeClass("hidden");
+                faded = true;
+            }
 
 
             $.getJSON('http://api.openweathermap.org/data/2.5/weather?q={{$location}}&appid=a08eb18e2263126de2d45502c41e224b&units=metric', function (data) {

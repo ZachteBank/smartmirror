@@ -11,6 +11,9 @@ body{background-color: black;}
 #dateDigital {
     font-size: 60px;
 }
+#dayDigital {
+     font-size: 60px;
+ }
 
 .bg-black{
     background-color: black !important;

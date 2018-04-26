@@ -31,11 +31,12 @@ function setDate() {
     var mm = today.getMonth()+1; //January is 0!
     var day = today.getDay();
     
-    var date = getDay(day) + " "  + dd + " " + getMonth(mm);
+    var date = dd + " " + getMonth(mm);
 
     console.log(mm);
 
-    document.getElementById('dateDigital').innerHTML =
+    document.getElementById('dayDigital').innerHTML = getDay(day);
+        document.getElementById('dateDigital').innerHTML =
         date;
 }
 
