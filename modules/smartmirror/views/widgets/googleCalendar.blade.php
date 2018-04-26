@@ -26,11 +26,22 @@
     {
         font-weight: bold;
         font-size: 30px;
+        border-bottom: 0px;
+    }
+
+    #calendar ul li {
+        border-bottom: 1px solid rgba(255,255,255,0.6);
+        padding-bottom: 5px;
+        overflow: hidden;
+    }
+
+    #calendar ul li:last-child {
+        border-bottom: 0px;
     }
 
     #calendar ul li div{
         display: inline-block;
-        text-align: left;
+        text-align: center;
     }
 
     #calendar ul li div.stripe{
@@ -96,10 +107,10 @@
             for (var item of data.items) {
                 var date = new Date(item.start.dateTime);
                 if(compareDate(date, today)) {
-                    $obj.append("<li><div class='summary col-md-5 col-md-offset-2'>" + item.summary + "</div>" +
-                        "<div class='startDateTime col-md-1'>" + convertTime(item.start.dateTime) + "</div>" +
+                    $obj.append("<li class='col-md-8 col-md-offset-2'><div class='summary col-md-5'>" + item.summary + "</div>" +
+                        "<div class='startDateTime col-md-2'>" + convertTime(item.start.dateTime) + "</div>" +
                         "<div class='stripe col-md-1'>-</div>" +
-                        "<div class='endDateTime col-md-1'>" + convertTime(item.end.dateTime) + "</div></li>");
+                        "<div class='endDateTime col-md-2'>" + convertTime(item.end.dateTime) + "</div></li>");
                 }
             }
         }
@@ -116,7 +127,7 @@
                 console.log("Date timestamp:");
 
                 if(compareDate(date, tomorrow)) {
-                    $obj.append("<li><div class='summary col-md-5 col-md-offset-2'>" + item.summary + "</div>" +
+                    $obj.append("<li class='col-md-8 col-md-offset-2'><div class='summary col-md-5'>" + item.summary + "</div>" +
                         "<div class='startDateTime col-md-1'>" + convertTime(item.start.dateTime) + "</div>" +
                         "<div class='stripe col-md-1'>-</div>" +
                         "<div class='endDateTime col-md-1'>" + convertTime(item.end.dateTime) + "</div></li>");
