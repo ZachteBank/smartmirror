@@ -26,17 +26,24 @@
     {
         font-weight: bold;
         font-size: 30px;
-        border-bottom: 0px;
+        /*border-bottom: 0px;*/
     }
 
     #nuDotNl ul li {
-        border-bottom: 1px solid rgba(255,255,255,0.6);
-        padding-bottom: 5px;
+        /*border-bottom: 1px solid rgba(255,255,255,0.6);
+        padding-bottom: 5px;*/
         overflow: hidden;
     }
 
     #nuDotNl ul li:last-child {
-        border-bottom: 0px;
+        /*border-bottom: 0px;*/
+    }
+
+    #nuDotNl ul li hr{
+        margin: 5px auto;
+        width: 40%;
+
+        border-color: rgba(255,255,255,0.6);
     }
 
     #nuDotNl ul li div{
@@ -94,8 +101,19 @@
             console.log("Nieuws");
 
             $obj.append("<li>"+"Nieuws:"+"</li>");
+            var first = true;
             for (var item of data.items) {
-                $obj.append("<li class=''><div class='summary col-md-12'>" + item.title + "</div></li>");
+                var string = "<li class=''>";
+
+                if(first){
+                    first = false;
+                }else{
+                    string += "<hr>";
+                }
+                string += "<div class='summary col-md-12'>" + item.title + "</div>";
+
+                string += "</li>";
+                $obj.append(string);
             }
         }
 
