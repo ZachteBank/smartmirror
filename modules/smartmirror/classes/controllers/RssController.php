@@ -31,6 +31,7 @@ class RssController
 
         $feed = simplexml_load_file($url);
 
+        $test = "wow";
 
         $i = 0;
         foreach ($feed->channel->item as $item) {
