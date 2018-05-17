@@ -48,4 +48,9 @@ class RssController
         $response->write(json_encode($json));
         return $response;
     }
+
+    public function test()
+    {
+        return null;
+    }
 }
