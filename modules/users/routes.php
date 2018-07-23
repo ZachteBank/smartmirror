@@ -14,12 +14,12 @@ use Framework\Modules\Users\Controllers\UserController;
 router()->group('/cms', function () {
     router()->group('/users', function () {
         router()->get('/add', [UserController::class, 'add'])->setName('users.user.add');
-        router()->post('/store', [UserController::class, 'store'])->setName('users.user.store')->add(csrf());
+        router()->post('/store', [UserController::class, 'store'])->setName('users.user.store');
         router()->get('/all', [UserController::class, 'all'])->setName('users.user.all');
     });
     router()->group('/groups', function () {
         router()->get('/add', [GroupController::class, 'add'])->setName('users.group.add');
-        router()->post('/store', [GroupController::class, 'store'])->setName('users.group.store')->add(csrf());
+        router()->post('/store', [GroupController::class, 'store'])->setName('users.group.store');
         router()->get('/all', [GroupController::class, 'all'])->setName('users.group.all');
     });
 });

@@ -31,8 +31,6 @@ class RssController
 
         $feed = simplexml_load_file($url);
 
-        $test = "wow";
-
         $i = 0;
         foreach ($feed->channel->item as $item) {
             $title       = (string) $item->title;
@@ -48,10 +46,5 @@ class RssController
         $response->withHeader('Content-Type', 'application/json');
         $response->write(json_encode($json));
         return $response;
-    }
-
-    public function test()
-    {
-        return null;
     }
 }
